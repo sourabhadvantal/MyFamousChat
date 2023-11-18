@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/ic_sample_chat_background"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/chat_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+
+            >
+
+            <FrameLayout
+
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/back_btn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center|start"
+                    android:src="@drawable/ic_chat_back_arrow"
+                    app:tint="@color/icons_color"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                >
+
+
+                <RelativeLayout
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:id="@+id/neu_status"
+                    android:layout_width="@dimen/_30sdp"
+
+                    android:layout_height="@dimen/_30sdp"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+
+                        android:elevation="12dp"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        android:thicknessRatio="1.9"
+                        app:cardCornerRadius="50dp">
+
+                        <ImageView
+
+
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_chat_user_1">
+
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/neu_status"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+
+
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gelionsemibold"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Martha Craig"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/textcolor_black"
+                        android:textSize="@dimen/_12ssp">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:id="@+id/rl_chat_camera"
+
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    >
+
+                    <ImageView
+
+                        android:id="@+id/iv_normal_call"
+                        android:layout_width="@dimen/_20sdp"
+
+                        android:layout_height="@dimen/_20sdp"
+
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chat_call_small"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:id="@+id/ic_video_call"
+
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chat_video_call"
+                        app:tint="@color/icons_color"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--        <ImageView-->
+<!--            android:src="@drawable/ic_sample_chat_background"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--           >-->
+
+<!--        </ImageView>-->
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:layout_weight="1"
+                tools:listitem="@layout/item_message_by_user"
+                android:id="@+id/rec_messages"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@id/li_chating"
+
+                    android:id="@+id/li_bottom_sendfiles"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/bottom_sheet_send_files" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="@dimen/_3sdp"
+                    android:background="@drawable/ic_chat_bottomnav_back"
+
+                    android:id="@+id/li_chating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/li_bottom_sendfiles"
+                   >
+
+
+
+                    <LinearLayout
+
+                      android:layout_margin="@dimen/_6sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+
+                        app:cardCornerRadius="@dimen/_20sdp">
+
+                        <LinearLayout
+                          android:background="@drawable/ic_search_chat_react"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                >
+
+
+                                <ImageView
+                                    android:id="@+id/iv_chat_files"
+                                    android:layout_width="@dimen/_25sdp"
+
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:padding="@dimen/_1sdp"
+                                    android:src="@drawable/ic_send_files"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/iv_chat_camera"
+                                    android:layout_width="@dimen/_25sdp"
+
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:padding="@dimen/_1sdp"
+                                    android:src="@drawable/ic_chat_camera_blue"
+                                    tools:ignore="ContentDescription" />
+
+                            </RelativeLayout>
+
+
+                            <EditText
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:fontFamily="@font/gelionregular"
+                                android:gravity="center_vertical"
+                                android:paddingStart="@dimen/_12sdp"
+                                android:hint="Type message here..."
+                                android:textSize="@dimen/_11ssp">
+
+                            </EditText>
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/li_chat_send_options"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <RelativeLayout
+
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    >
+
+                                    <ImageView
+
+                                        android:layout_width="@dimen/_25sdp"
+
+                                        android:layout_height="@dimen/_25sdp"
+
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:src="@drawable/ic_mic"
+                                        tools:ignore="ContentDescription" />
+
+                                </RelativeLayout>
+                                <RelativeLayout
+
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    >
+
+                                    <ImageView
+
+                                        android:layout_width="@dimen/_25sdp"
+
+                                        android:layout_height="@dimen/_25sdp"
+
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:src="@drawable/ic_chat_gallery"
+                                        tools:ignore="ContentDescription" />
+2
+                                </RelativeLayout>
+                                <RelativeLayout
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    >
+
+                                    <ImageView
+
+                                        android:layout_width="@dimen/_25sdp"
+
+                                        android:layout_height="@dimen/_25sdp"
+
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:src="@drawable/ic_chat_files"
+                                        tools:ignore="ContentDescription" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:id="@+id/rl_send_message_chat"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+
+                                >
+
+                                <ImageView
+
+                                    android:layout_width="@dimen/_25sdp"
+
+                                    android:layout_height="@dimen/_25sdp"
+
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_3sdp"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:layout_marginBottom="@dimen/_3sdp"
+                                    android:src="@drawable/ic_chat_send_message"
+                                    tools:ignore="ContentDescription" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

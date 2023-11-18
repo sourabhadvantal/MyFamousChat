@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="bottom"
+    android:background="@android:color/transparent"
+
+    android:gravity="bottom"
+    android:orientation="vertical">
+    <com.google.android.material.card.MaterialCardView
+
+        style="@style/CustomCardViewStyle"
+        android:id="@+id/li_dialogit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/iv_black_img"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+
+                    android:id="@+id/neu_status"
+                    style="@style/neu_backhome_style"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+
+                        android:elevation="12dp"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        android:thicknessRatio="1.9"
+                        app:cardCornerRadius="40dp">
+
+                        <ImageView
+
+                            android:id="@+id/ivItemStory"
+                            android:layout_width="@dimen/_37sdp"
+                            android:layout_height="@dimen/_37sdp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_sara_big">
+
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/iv_black_img"
+                android:id="@+id/tv_clearchatxt"
+
+                style="@style/sty_bold_18_dp"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="Block Sara?"
+                android:textColor="@color/txtblack_70"
+                android:textSize="@dimen/_12ssp">
+
+            </TextView>
+            <TextView
+
+                android:id="@+id/tv_clearchatmsg"
+                android:layout_below="@+id/tv_clearchatxt"
+                style="@style/sty_regular_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:gravity="center"
+                android:text="They won't be able to message you or find your profile or content on Instagram. They won't be notified that you blocked them. You can unblock them at any time in settings."
+                android:textColor="@color/textcolor_60"
+                android:textSize="@dimen/_9ssp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_below="@+id/tv_clearchatmsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_13sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <RelativeLayout
+                    android:id="@+id/btn_clear_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:background="@drawable/btn_backdraw"
+
+                    android:gravity="center_horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        style="@style/sty_smallest_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginVertical="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_37sdp"
+                        android:layout_marginEnd="@dimen/_37sdp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Block"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+
+                <!--            </RelativeLayout>-->
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

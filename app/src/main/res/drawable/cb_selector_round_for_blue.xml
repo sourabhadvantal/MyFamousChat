@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state -->
+    <item android:drawable="@drawable/ic_selector_check_blue" android:state_checked="true" />
+    <!-- Unchecked state -->
+    <item android:drawable="@drawable/ic_round_select_uncheck" />
+
+</selector>

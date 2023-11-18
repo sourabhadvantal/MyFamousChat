@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+
+   >
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Image Background -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@color/black"
+                    tools:ignore="ContentDescription" />
+
+
+            </RelativeLayout>
+
+            <!-- Text Overlay -->
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_marginVertical="@dimen/_7sdp"
+                    android:id="@+id/neu_status"
+
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+
+                        android:elevation="12dp"
+                        android:innerRadius="0dp"
+                        android:shape="ring"
+                        android:thicknessRatio="1.9"
+                        app:cardCornerRadius="50dp">
+
+                        <ImageView
+
+                            android:id="@+id/iv_user_image"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_profile">
+
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/neu_status"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+
+
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gelionmedium"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="My Famous Audio..."
+
+                        android:textAlignment="center"
+                        android:textColor="@color/textcolor_call_audio"
+                        android:textSize="@dimen/_9ssp">
+
+                    </TextView>
+
+
+                    <TextView
+
+                        android:id="@+id/tv_seetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerInParent="true"
+
+                        android:layout_marginTop="@dimen/_3sdp"
+
+                        android:layout_marginEnd="@dimen/_20sdp"
+
+                        android:fontFamily="@font/gelionregular"
+
+                        android:text="Martha Craig"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@color/linecolor"
+                        android:textSize="@dimen/_9ssp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Bottom Layout -->
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+
+                        android:id="@+id/rl_cancel_call"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/li_cancel_call"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_call_red_background"
+                            android:orientation="horizontal"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_10sdp"
+
+                                android:src="@drawable/ic_cancel_call"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp">
+
+                            </ImageView>
+
+                            <!--                            //+++++++++++++++it will contain speaker off image also-->
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/tv_declince"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/li_cancel_call"
+
+
+                            android:layout_centerInParent="true"
+
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/gelionregular"
+
+                            android:text="Decline"
+                            android:textColor="@color/linecolor"
+                            android:textSize="@dimen/_12ssp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:id="@+id/rl_pick_call"
+
+
+
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/li_pick_call"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/ic_blue_call_pickup"
+                            android:orientation="horizontal"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp">
+                            <ImageView
+                                android:padding="@dimen/_10sdp"
+
+                                android:src="@drawable/ic_call_white_tick_pick"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp">
+
+                            </ImageView>
+
+                            <!--                            //+++++++++++++++it will contain speaker off image also-->
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:id="@+id/tv_pickcall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/li_pick_call"
+
+
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+
+
+                            android:fontFamily="@font/gelionregular"
+                            android:text="Answer"
+
+                            android:textColor="@color/linecolor"
+                            android:textSize="@dimen/_12ssp">
+
+                        </TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,21 @@
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="rectangle">-->
+<!--  <corners-->
+<!--      android:topLeftRadius="@dimen/_15sdp"-->
+<!--      android:topRightRadius="@dimen/_15sdp"-->
+
+<!--      />-->
+<!--  &lt;!&ndash; Change the color as per your requirement &ndash;&gt;-->
+<!--  &lt;!&ndash;    <size android:width="14dp" android:height="14dp" />&ndash;&gt;-->
+<!--  &lt;!&ndash; Adjust the size as per your requirement &ndash;&gt;-->
+<!--  <solid android:color="#ececed" />-->
+<!--</shape>-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="429dp"
+    android:height="166dp"
+    android:viewportWidth="429"
+    android:viewportHeight="166">
+  <path
+      android:pathData="M15,0H414a15,15 0,0 1,15 15V166a0,0 0,0 1,0 0H0a0,0 0,0 1,0 0V15A15,15 0,0 1,15 0Z"
+      android:fillColor="@color/chat_background_bottom_color"/>
+</vector>

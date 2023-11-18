@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home_fragment_chat_home"
+    app:startDestination="@id/nav_fragment_chat_home"
+    >
+    <fragment
+
+        android:id="@+id/nav_fragment_chat_home"
+        android:name="com.advantal.myfamouschat.chat.ChatHomeFragment"
+        android:label="fragment_chat_home"
+        tools:layout="@layout/fragment_chat_home">
+
+        <action
+            android:id="@+id/action_nav_fragment_chat_home_to_nav_fragment_user_message"
+            app:destination="@id/nav_fragment_user_message" />
+
+        <!--            <action-->
+        <!--                android:id="@+id/action_nav_fragment_chat_home_to_nav_camera_frags"-->
+        <!--                app:destination="@id/nav_camera_frags" />-->
+    </fragment>
+    <fragment
+
+        android:id="@+id/nav_fragment_user_message"
+        android:name="com.advantal.myfamouschat.chat.UserMessageFragment"
+        android:label="fragment_user_message"
+        tools:layout="@layout/fragment_user_message">
+
+        <action
+            android:id="@+id/action_nav_fragment_user_message_to_nav_fragment_call_initial"
+            app:destination="@id/nav_fragment_call_initial" />
+        <action
+            android:id="@+id/action_nav_fragment_user_message_to_nav_fragment_chat_media"
+            app:destination="@id/nav_fragment_chat_media" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/nav_fragment_call_initial"
+        android:name="com.advantal.myfamouschat.chat.CallFragment"
+        android:label="fragment_call_activity"
+        tools:layout="@layout/fragment_call">
+
+        <action
+            android:id="@+id/action_nav_fragment_call_initial_to_nav_activity_calling"
+            app:destination="@id/nav_activity_calling" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/nav_fragment_chat_media"
+        android:name="com.advantal.myfamouschat.chat.ChatMediaFragment"
+        android:label="fragment_chat_media"
+        tools:layout="@layout/fragment_chat_media">
+
+    </fragment>
+    <activity
+
+        android:id="@+id/nav_activity_calling"
+        android:name="com.advantal.myfamouschat.chat.CallingActivity"
+        android:label="activity_calling"
+        tools:layout="@layout/activity_calling">
+
+    </activity>
+
+</navigation>

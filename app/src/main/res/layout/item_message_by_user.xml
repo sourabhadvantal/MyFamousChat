@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_13sdp"
+    android:layout_marginBottom="@dimen/_6sdp">
+
+    <RelativeLayout
+
+        android:id="@+id/rl_timeofmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/ic_chat_message_time_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_timeofmessage"
+            style="@style/sty_normal_txt_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gelionmedium"
+
+            android:text="Fri, Jul 26"
+            android:textColor="@color/text_chat_color_3c3"
+            android:textSize="@dimen/_8ssp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@+id/rl_timeofmessage">
+
+        <LinearLayout
+
+            android:id="@+id/li_message_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/li_sender_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/ic_chat_sender_message_back">
+
+                    <TextView
+
+                        android:id="@+id/tv_message_sender"
+                        style="@style/sty_lowerheadingtextview_reg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_9sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:ellipsize="end"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:text="Hey, how are you?"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp">
+
+                    </TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/li_sender_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/ivDeleteImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@drawable/ic_chat_send_image_back"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_gallimg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:src="@drawable/ic_chat_send"
+                            app:tint="@color/icons_color"
+                            tools:ignore="ContentDescription" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+
+                            android:id="@+id/fl_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/li_gallimg"
+                                android:layout_width="@dimen/_160sdp"
+
+                                android:layout_height="@dimen/_160sdp"
+                                android:background="@drawable/ic_chat_image_back">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/gal_img_cd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    app:cardCornerRadius="@dimen/_8sdp">
+
+                                    <ImageView
+
+                                        android:id="@+id/iv_galimage"
+                                        android:layout_width="@dimen/_160sdp"
+                                        android:layout_height="@dimen/_160sdp"
+
+                                        android:layout_gravity="center"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_story_5">
+
+                                    </ImageView>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/li_message_receiver"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:id="@+id/cd_user_image"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="bottom"
+                android:elevation="0dp"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:thicknessRatio="1.9"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile">
+
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chat_receiver_message_back"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+
+                    android:id="@+id/tv_message_receiver_name"
+                    style="@style/sty_lowerheadingtextview_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="Martha Craig"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/_12ssp">
+
+                </TextView>
+
+                <TextView
+                    android:ellipsize="end"
+                    android:id="@+id/tv_message_receiver"
+                    style="@style/sty_lowerheadingtextview_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="Hey, how are you?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

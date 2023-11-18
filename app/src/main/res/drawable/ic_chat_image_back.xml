@@ -1,0 +1,22 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+
+    >
+    <corners
+        android:topLeftRadius="@dimen/_8sdp"
+        android:topRightRadius="@dimen/_8sdp"
+        android:bottomLeftRadius="@dimen/_8sdp"
+
+
+        />
+    <!-- Change the color as per your requirement -->
+    <!--    <size android:width="14dp" android:height="14dp" />-->
+    <!-- Adjust the size as per your requirement -->
+    <gradient
+
+        android:startColor="#007AFF"
+        android:endColor="#007AFF"
+        >
+
+    </gradient>
+</shape>
